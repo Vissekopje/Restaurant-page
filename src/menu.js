@@ -88,16 +88,19 @@ const menuItems = [
 
 function menu(){ 
     const contentContainer = document.createElement('div');
-    contentContainer.classList.add('container');
+    contentContainer.classList.add('menucontainer');
 
     const starterContainer = document.createElement('div');
-    starterContainer.classList.add('starter');
+    starterContainer.classList.add('starters');
+    starterContainer.textContent = "Starters"
 
     const mainsContainer = document.createElement('div');
     mainsContainer.classList.add('mains');
+    mainsContainer.textContent = "Mains"
 
     const dessertContainer = document.createElement('div');
     dessertContainer.classList.add('desserts');
+    dessertContainer.textContent = "Desserts"
 
     contentContainer.appendChild(starterContainer);
     contentContainer.appendChild(mainsContainer);
@@ -108,7 +111,7 @@ function menu(){
         menuItem.classList.add("menuitem");
 
         const itemName = document.createElement('div');
-        itemName.classList.add("itemName")
+        itemName.classList.add("itemname")
         itemName.textContent = `${item.name}`
 
         const itemDescription = document.createElement('div');
