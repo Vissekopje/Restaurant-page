@@ -1,12 +1,12 @@
 import './style.css';
 import {home, apple} from './home'
+import {menu} from './menu'
 console.log("Perfect")
 
 const homeButton = document.querySelector(".tab-home")
-const menu = document.querySelector(".tab-menu")
+const menuButton = document.querySelector(".tab-menu")
 const contact = document.querySelector(".tab-contact")
-apple()
-apple()
+
  function removeContent(){
   const content = document.getElementById("content")
  while (content.firstChild){
@@ -21,9 +21,9 @@ homeButton.addEventListener('click', () => {
   apple()
 })
 
-menu.addEventListener('click', () => {
+menuButton.addEventListener('click', () => {
   removeContent()
- 
+  menu()
 })
 
 

@@ -14,14 +14,16 @@ function home(){
 
     function introductionMessage(){
         const introMessage = document.createElement('div')
-        introMessage.innerHTML = "Savor plant-powered perfection at Vegan Valhalla, where every bite fuels our mission for compassionate dining."
+        introMessage.innerHTML = 'Savor plant-powered perfection at Vegan Valhalla, where every bite fuels our mission for compassionate dining.'
         introMessage.classList.add('main-message')
 
         return introMessage
     }
-content.appendChild(introductionMessage());
-content.appendChild(introduction());
-
+    const contentContainer = document.createElement('div');
+    contentContainer.classList.add('container');
+    contentContainer.appendChild(introductionMessage());
+    contentContainer.appendChild(introduction());
+    content.appendChild(contentContainer)
 }
 
 export{

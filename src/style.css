@@ -1,12 +1,64 @@
-.main-message{
-  color: green;
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background: url(./images/brooke-lark-oaz0raysASk-unsplash.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+header{
+  width: 100%;
+  height: 20%;
+  background-color: rgba(14, 100, 33, 0.479);
+  position: sticky;
+  top: 0;
+}
 
-.introduction {
-    color: red;
-  }
-
+nav.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(25px, 2%);
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
 button {
-    background-color: blue;
-}
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    color: #FFFFFF;
+    background-color: #3e6120;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px white solid;
+    border-radius: 25px;
+  }
+  .container{
+    background-color: rgba(255, 255, 255, 0.90);
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    justify-content: center;
+    align-self: center;
+    margin: 5% 25% 10% 25%;
+    padding: 10px;
+    border-radius: 25px;;
+  }
+  .main-message{
+    color: green;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+  
+  
+  .introduction {
+    display: flex;
+      color: red;
+    }
+  
