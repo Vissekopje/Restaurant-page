@@ -1,4 +1,9 @@
-.hello {
+.main-message{
+  color: green;
+}
+
+
+.introduction {
     color: red;
   }
 

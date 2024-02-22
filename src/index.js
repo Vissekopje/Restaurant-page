@@ -1,13 +1,33 @@
+import './style.css';
+import {home, apple} from './home'
 console.log("Perfect")
 
-import './style.css';
-
- function component() {
-   const element = document.createElement('div');
-    element.innerHTML = "Nana kom on"
-  element.classList.add('hello');
-
-   return element;
+const homeButton = document.querySelector(".tab-home")
+const menu = document.querySelector(".tab-menu")
+const contact = document.querySelector(".tab-contact")
+apple()
+apple()
+ function removeContent(){
+  const content = document.getElementById("content")
+ while (content.firstChild){
+   content.removeChild(content.lastChild)
+  }
  }
 
- document.body.appendChild(component());
+
+homeButton.addEventListener('click', () => {
+  removeContent()
+  home()
+  apple()
+})
+
+menu.addEventListener('click', () => {
+  removeContent()
+ 
+})
+
+
+contact.addEventListener('click', () => {
+  removeContent()
+})
+
