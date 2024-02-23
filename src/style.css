@@ -42,17 +42,25 @@ button {
   .container{
     background-color: rgba(255, 255, 255, 0.90);
     display: grid;
-    grid-template-rows: 1fr 8fr;
+    grid-template-rows: 1fr;
     justify-content: center;
     align-self: center;
-    margin: 5% 25% 10% 25%;
-    padding: 10px;
-    border-radius: 25px;;
+    margin: 5% max(250px,25%) 10% max(250px,25%);
+    padding: 25px;
+    border-radius: 25px;
   }
-  
+  .logo{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin: 0px;
+    padding: 15px;
+    width:  100%;
+    height: 200px;
+  }
   .main-message{
-    color: green;
-    font-size: 24px;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
     padding-bottom: 15px;
   }
@@ -60,9 +68,20 @@ button {
   
   .introduction {
     display: flex;
-      color: red;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 15px;
     }
-  
+
+  .quotecontainer{
+      background-color: rgba(14, 100, 33, 0.795);
+      display: grid;
+      grid-template-rows: 1fr;
+      justify-content: center;
+      align-self: center;
+      padding: 15px;
+      border-radius: 10px;
+    }
 
   .menucontainer{
       background-color: rgba(255, 255, 255, 0.90);
@@ -72,7 +91,7 @@ button {
       gap: 25px;
       justify-content: center;
       align-self: center;
-      margin: 5% 25% 10% 25%;
+      margin: 5% 20% 10% 20%;
       padding: 25px;
       border-radius: 25px;;
     }
@@ -118,4 +137,46 @@ button {
       font-size: 12px;
       grid-column: 1;
       grid-row: 2;
+    }
+
+    .contactcontainer{
+      background-color: rgba(255, 255, 255, 0.90);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      justify-content: center;
+      align-self: center;
+      margin: 5% 25% 10% 25%;
+      padding: 25px;
+      border-radius: 25px;
+    }
+
+    .contact{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .adress,
+    .number,
+    .email{
+      display: grid;
+      font-size: 18px;
+      font-weight: 100;
+    }
+    .openingcontainer{
+      display: grid;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      }
+
+    .dayopening{
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 100;
     }

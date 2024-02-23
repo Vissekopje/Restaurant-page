@@ -1,11 +1,12 @@
 import './style.css';
-import {home, apple} from './home'
+import {home} from './home'
 import {menu} from './menu'
+import {contact} from './contact'
 console.log("Perfect")
 
 const homeButton = document.querySelector(".tab-home")
 const menuButton = document.querySelector(".tab-menu")
-const contact = document.querySelector(".tab-contact")
+const contactButton = document.querySelector(".tab-contact")
 
  function removeContent(){
   const content = document.getElementById("content")
@@ -14,11 +15,10 @@ const contact = document.querySelector(".tab-contact")
   }
  }
 
-
+ 
 homeButton.addEventListener('click', () => {
   removeContent()
   home()
-  apple()
 })
 
 menuButton.addEventListener('click', () => {
@@ -27,7 +27,9 @@ menuButton.addEventListener('click', () => {
 })
 
 
-contact.addEventListener('click', () => {
+contactButton.addEventListener('click', () => {
   removeContent()
+  contact()
 })
 
+home()

@@ -1,24 +1,99 @@
+function contact(){
+      class Day{
+         constructor(name, hours) {
+            this.name = name;
+            this.description = hours;
+        }
+      }
+      const openingDays = [
+         new Day(
+            "Monday",
+            "17:00-22:00",
+         ),
+        new Day(
+         "Tuesday",
+         "17:00-22:00",
+         ),
+         new Day(
+            "Wednesday",
+            "11:00-22:00",
+         ),
+        new Day(
+         "Thursday",
+         "11:00-22:00",
+         ),
+         new Day(
+            "Friday",
+            "11:00-23:00",
+         ),
+        new Day(
+         "Saturday",
+         "10:00-22:00",
+         ),
+         new Day(
+            "Sunday",
+            "Closed",
+         )   
+         ]
+   
+ 
+      const openingcontainer = document.createElement('div');
+       openingcontainer.innerHTML = "Opening Hours"
+       openingcontainer.classList.add('openingcontainer');
+  
+      openingDays.forEach(day => {
+          const dayOpening = document.createElement('div');
+          dayOpening.classList.add("dayopening");
+  
+          const dayName = document.createElement('div');
+          dayName.classList.add("dayname")
+          dayName.textContent = `${day.name}`
+  
+          const dayHours = document.createElement('div');
+          dayHours.classList.add("dayhours")
+          dayHours.textContent = `${day.description}`
 
-console.log("apple")
+          dayOpening.appendChild(dayName);
+          dayOpening.appendChild(dayHours)
 
+          openingcontainer.appendChild(dayOpening)
+  
+      })
+  
 
- function introduction() {
-    const element = document.createElement('div');
-    element.innerHTML = "Welcome to Vegan Valhalla – a plant-based paradise in London. Indulge in our compassionate cuisine crafted with fresh, locally-sourced ingredients. From savory classics to innovative dishes, each bite nourishes body and soul. Join us and discover a world where food is art and compassion reigns supreme."
-    element.classList.add('introduction');
+   function contactInfo(){
+      const contactContainer = document.createElement('div')
+      contactContainer.innerHTML = "Contact"
+      contactContainer.classList.add('contact')
 
-    return  element;
- }
+       const adress = document.createElement('div')
+       adress.innerHTML = '123 Green Street, London E7 8JF'
+       adress.classList.add('adress')
 
- function introductionMessage(){
-    const introMessage = document.createElement('div')
-    introMessage.innerHTML = "Savor plant-powered perfection at Vegan Valhalla, where every bite fuels our mission for compassionate dining."
-    introMessage.classList.add('main-message')
+       const number = document.createElement('div')
+       number.innerHTML = '+44 20 1234 5678'
+       number.classList.add('number')
 
-    return introMessage
- }
+       const email = document.createElement('div')
+       email.innerHTML = 'example@email.co.uk'
+       email.classList.add('email')
 
+       contactContainer.appendChild(adress)
+       contactContainer.appendChild(number)
+       contactContainer.appendChild(email)
 
+       return contactContainer
+   }
 
-content.appendChild(introductionMessage());
-content.appendChild(introduction());
+   const content = document.getElementById("content")
+   const contentContainer = document.createElement('div');
+   contentContainer.classList.add('contactcontainer');
+
+   contentContainer.appendChild(contactInfo());
+   contentContainer.appendChild(openingcontainer);
+   content.appendChild(contentContainer)
+
+}
+export{
+   contact
+}
