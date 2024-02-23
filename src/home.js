@@ -3,7 +3,7 @@ function home(){
 
     function logo(){
         const logo = document.createElement('img')
-        logo.src = `../src/images/vegan-valhalla-high-resolution-logo-black-transparent.svg`
+        logo.src = '../dist/images/vegan-valhalla-high-resolution-logo-black-transparent.svg'
         logo.classList.add('logo')
         return logo
     }
